@@ -8,5 +8,5 @@ export default DS.Model.extend({
   title: attr('string'),
   category: attr('string'),
   answers: DS.hasMany('answer', {async: true}),
-  date: attr('date')
+  questionDate: attr('date')
 });

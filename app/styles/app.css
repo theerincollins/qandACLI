@@ -1,3 +1,51 @@
 .body-div {
   margin-top: 50px;
 }
+
+html {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-image: url('frogs.jpg');
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: white;
+}
+
+.index-title {
+  float: right;
+  margin-top: 65%;
+  color: white;
+  font-size: 45px;
+  margin-right: -20px;
+  padding-right: -20px;
+}
+
+.question-box {
+  border-radius: 20%;
+  border-style: solid;
+  background-color: rgb(34, 96, 0);
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.question-div {
+  background-color: rgb(34, 96, 0);
+  padding: 15px;
+  width: 60%;
+  margin-top: 20px;
+}
+
+#add-answer {
+  color: black;
+}

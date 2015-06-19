@@ -10,7 +10,7 @@ var AddQuestionController = {
         title: this.get('title'),
         body: this.get('body'),
         category: this.get('category'),
-        date: inputDate.toString()
+        questionDate: inputDate.toString()
       });
       newQuestion.save()
 

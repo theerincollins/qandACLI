@@ -1,53 +1,55 @@
-<h3 class="spring-name">{{model.title}}</h3>
+<div class= "question-div">
+  <h3 class="spring-name">{{model.title}}</h3>
 
-{{#if isEditing}}
-<form id="edit-form">
-  <div class="form-group">
-    <label for="author">Author</label>
-    {{input value=model.author id="author" class="form-control"}}
-  </div>
+  {{#if isEditing}}
+  <form id="edit-form">
+    <div class="form-group">
+      <label for="author">Author</label>
+      {{input value=model.author id="author" class="form-control"}}
+    </div>
 
-  <div class="form-group">
-    <label for="title">Title</label>
-    {{input value=model.title id="title" class="form-control"}}
-  </div>
+    <div class="form-group">
+      <label for="title">Title</label>
+      {{input value=model.title id="title" class="form-control"}}
+    </div>
 
-  <div class="form-group">
-    <label for="body">Body</label>
-    {{input value=model.body id="body" class="form-control"}}
-  </div>
+    <div class="form-group">
+      <label for="body">Body</label>
+      {{input value=model.body id="body" class="form-control"}}
+    </div>
 
-  <div class="form-group">
-    <label for="category">Category</label>
-    {{input value=model.category id="category" class="form-control"}}
-  </div>
+    <div class="form-group">
+      <label for="category">Category</label>
+      {{input value=model.category id="category" class="form-control"}}
+    </div>
 
-<button class="btn btn-primary" {{action 'saveEdit'}}>Save</button>
-</form>
-{{else}}
+  <button class="btn btn-primary" {{action 'saveEdit'}}>Save</button>
+  </form>
+  {{else}}
 
-<p class="author">posted by: {{model.author}}</p>
-<p>{{model.body}}</p>
-<p>{{model.category}}</p>
-<p>Posted On: {{model.date}}</p>
+  <p class="author">posted by: {{model.author}}</p>
+  <p>{{model.body}}</p>
+  <p>{{model.category}}</p>
+  <p>Posted On: {{model.questionDate}}</p>
 
-<button class="btn btn-primary" {{action 'edit'}}>Edit Question</button>
-<button class="btn btn-danger" {{action 'delete'}}>Delete Question</button>
+  <button class="btn btn-primary" {{action 'edit'}}>Edit Question</button>
+  <button class="btn btn-danger" {{action 'delete'}}>Delete Question</button>
 
-<h3>Answers</h3>
+  <h3>Answers</h3>
 
-<ul class="list-unstyled">
-  {{#each answer in model.answers}}
-    <li>
-      {{answer.answerAuthor}} says: {{answer.text}}
-      <p>Posted On: {{answer.date}}</p>
-    </li>
-  {{/each}}
-</ul>
+  <ul class="list-unstyled">
+    {{#each answer in model.answers}}
+      <li>
+        {{answer.answerAuthor}} says: {{answer.text}}
+        <p>Posted On: {{answer.answerDate}}</p>
+      </li>
+    {{/each}}
+  </ul>
 
-<form id="add-answer">
-  {{input value = answerAuthor placeholder="Username"}}
-  {{input value = text placeholder="Answer"}}
-  <button {{action 'addAnswer'}} class="btn btn-success">+ Answer</button>
-</form>
-{{/if}}
+  <form id="add-answer">
+    {{input value = answerAuthor placeholder="Username"}}
+    {{input value = text placeholder="Answer"}}
+    <button {{action 'addAnswer'}} class="btn btn-success">+ Answer</button>
+  </form>
+  {{/if}}
+</div>

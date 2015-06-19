@@ -11,7 +11,7 @@ var QuestionController = {
       var newAnswer = this.store.createRecord('answer', {
         text: this.get('text'),
         answerAuthor: this.get('answerAuthor'),
-        date: inputDate.toString()
+        answerDate: inputDate.toString()
       });
 
       var question = this.get('controllers.question.model');
@@ -31,7 +31,6 @@ var QuestionController = {
     saveEdit: function() {
       var question = this.get('model');
       question.save();
-      debugger;
       this.set('isEditing', false);
     },
     delete: function() {

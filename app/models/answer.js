@@ -6,5 +6,5 @@ export default DS.Model.extend({
   text: attr('string'),
   answerAuthor: attr('string'),
   question: DS.belongsTo('question', {async: true}),
-  date: attr('date')
+  answerDate: attr('date')
 });
