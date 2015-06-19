@@ -1,0 +1,23 @@
+  <h1>Add a Question</h1>
+
+  <div class="form-group">
+    <label for="author">Author</label>
+    {{input value=author id="author" class="form-control"}}
+  </div>
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    {{input value=title id="title" class="form-control"}}
+  </div>
+
+  <div class="form-group">
+    <label for="body">Body</label>
+    {{input value=body id="body" class="form-control"}}
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    {{input value=category id="category" class="form-control"}}
+  </div>
+
+  {{#link-to 'questions'}}<button class="btn btn-primary" {{action 'addQuestion'}}>Save</button>{{/link-to}}

@@ -1,0 +1,10 @@
+<h1>List of questions</h1>
+<ul class="list-unstyled">
+  {{#each question in model}}
+    <li>
+      <h3 class="spring-name">{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}</h3>
+      <p class="author">posted by: {{question.author}}</p>
+      <p>Category: {{question.category}}</p>
+    </li>
+  {{/each}}
+</ul>
